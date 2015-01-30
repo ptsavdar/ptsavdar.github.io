@@ -1,13 +1,15 @@
 name: Panagiotis TSAVDARIS
-description: This is pano's blog
+description: This is Panos' blog
 author: Panagiotis TSAVDARIS
 author_email: ptsavdar@gmail.com
-#url: http://panagiotis.tsavdaris.com
+url: http://ptsavdar.github.io
 
-category_dir: /categories
+category_dir: /
 
 permalink: pretty
 
 markdown: redcarpet
+
+paginate: 5
 
 exclude: [ README.md, Gemfile ]

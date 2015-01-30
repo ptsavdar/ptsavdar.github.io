@@ -11,21 +11,43 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<meta name="viewport" content="width=device-width">
 		
-        <title>{% if page.title %} {{ page.title }} | {% endif %} {{ site.name }}</title>
-        <link rel="stylesheet" href="{{site.baseurl}}/style.css" />
+        {% if page.title %}
+        <title>{{ page.title }} | {{ site.name }}</title>
+        <meta property="og:title" content="{{ page.title }}">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+        <meta property="og:description" content="{% if page.description %}{{ page.description }}{% endif %}">
+        <meta name="description" content="{% if page.description %}{{ page.description }}{% endif %}"/>
+        {% if page.date %}
+        <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+        {% endif %}
+        {% if page.tags %}
+            {% for tag in page.tags %}
+        <meta content="{{ tag }}" property="article:tag">
+            {% endfor %}
+        {% endif %}
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@ptsavdar">
+        <meta name="twitter:creator" content="@ptsavdar">
+        <meta name="twitter:title" content="{{ page.title }}">
+        <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% endif %}">
+        {% else %}
+        <title>{{ site.title }}</title>
+        <meta property="og:title" content="{{ site.title }}">
+        <meta property="og:type" content="website">
         <meta name="description" content="{{site.description}}"/>
-        <meta name="author" content="{{site.author}}"/>
-        <link rel="author" href="humans.txt"/>
-        <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{site.baseurl}}/feed.xml" />
-
-        <link rel="stylesheet" href="{{site.baseurl}}/resources/fontello/css/fontello.css">
-        <link rel="stylesheet" href="{{site.baseurl}}/resources/fontello/css/animation.css">
-        <!--[if IE 7]><link rel="stylesheet" href="{{site.baseurl}}/resources/fontello/css/fontello-ie7.css"><![endif]-->
+        {% endif %}
+            
+        <link rel="alternate" type="application/atom+xml" title="{{site.name}}" href="{{site.url}}/atom.xml" />
+        
+        <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{site.baseurl}}/css/normalize.min.css" />
+        <link rel="stylesheet" href="{{site.baseurl}}/css/skeleton.min.css" />        
     </head>
 
     <body>
         <header>
-            <h1><a href="{{site.baseurl}}/">Welcome to {{ site.name }}</a></h1>
+            <h1><a href="{{site.url}}/">Welcome to {{ site.name }}</a></h1>
                 <h4>{{ site.description }}</h4>
             <hr />
         </header>
@@ -58,10 +80,10 @@
 
         <footer>
             <hr />
-            <p>&copy; <time>2012</time> {{ site.author }}</p>
+            <p>&copy; <time>2015</time> {{ site.author }}</p>
         </footer>
 
-        <script src="{{site.baseurl}}/scripts.js"></script>
+        <script src="{{site.baseurl}}/js/scripts.js"></script>
     </body>
 
 </html>
