@@ -1,0 +1,15 @@
+links:
+    -   title: Home
+        icon: fa-home
+        url: /
+    -   title: Contact
+        icon: fa-envelope
+        url: /contact
+    -   title: Reads
+        icon: fa-book
+        url: /reads
+    -   title: RSS Feed
+        icon: fa-rss
+        url: /atom.xml
+
+
