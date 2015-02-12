@@ -1,5 +1,6 @@
-.navbar { display: none; }
-
+.navbar h3 { margin-bottom: 0; padding-bottom: 0 }
+.navbar h3 a {text-decoration: none;}
+.navbar h3 a:hover {text-decoration: underline;}
 /* Larger than phone */
 @media (min-width: 550px) {
 
@@ -7,20 +8,16 @@
 
 /* Larger than tablet */
 @media (min-width: 750px) {
+  .visible-mobile {display: none;}
   /* Navbar */
-  .navbar + .docs-section {
-    border-top-width: 0; }
-  .navbar,
-  .navbar-spacer {
+  .navbar{
     display: block;
     width: 100%;
-    height: 6.5rem;
     background: #fff;
     z-index: 99;
-    border-top: 1px solid #eee;
     border-bottom: 1px solid #eee; }
-  .navbar-spacer {
-    display: none; }
+  .navbar div.logo-column {float: left; margin-right: 2rem;}
+  .navbar div.menu-column {float:right;}
   .navbar > .container {
     width: 100%; }
   .navbar-list {
@@ -37,7 +34,7 @@
     letter-spacing: .2rem;
     margin-right: 3rem;
     text-decoration: none;
-    line-height: 6.5rem;
+    line-height: 4.5rem;
     color: #222; }
   .navbar-link.active {
     color: #33C3F0; }
@@ -45,10 +42,14 @@
     position: fixed;
     top: 0;
     left: 0; }
-  .has-docked-nav .navbar-spacer {
-    display: block; }
   /* Re-overiding the width 100% declaration to match size of % based container */
   .has-docked-nav .navbar > .container {
     width: 80%; }
+}
+
+@media (max-width: 749px) {
+    .visible-desktop {display: none;}
+    .navbar {background-color: #1de9b6; color:#fff;}
+    .navbar h3 a {color: inherit;}
 }
 
