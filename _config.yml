@@ -24,7 +24,7 @@ exclude: [ README.md, Gemfile, Gemfile.lock ]
 footer-links:
     email: ptsavdar@gmail.com
     facebook: ptsavdar  
-    github: barryclark/jekyll-now
+    github: ptsavdar
     linkedin: ptsavdar
     twitter: ptsavdar
     stackoverflow: users/3016484/ptsavdar
