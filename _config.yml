@@ -14,4 +14,17 @@ markdown: redcarpet
 
 paginate: 5
 
-exclude: [ README.md, Gemfile ]
+sass:
+    sass_dir: _scss
+    style: :compressed
+
+exclude: [ README.md, Gemfile, Gemfile.lock ]
+
+# Includes an icon in the footer for each username you enter
+footer-links:
+    email: ptsavdar@gmail.com
+    facebook: ptsavdar  
+    github: barryclark/jekyll-now
+    linkedin: ptsavdar
+    twitter: ptsavdar
+    stackoverflow: users/3016484/ptsavdar

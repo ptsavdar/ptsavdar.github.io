@@ -40,40 +40,35 @@
             
         <link rel="alternate" type="application/atom+xml" title="{{site.name}}" href="{{site.baseurl}}/atom.xml" />
         
-        <link href='http://fonts.googleapis.com/css?family=Raleway:100,400' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{{site.baseurl}}/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{site.baseurl}}/css/normalize.min.css" />
-        <link rel="stylesheet" href="{{site.baseurl}}/css/skeleton.min.css" />
-        <link rel="stylesheet" href="{{site.baseurl}}/css/jPushMenu.css" />
         <link rel="stylesheet" href="{{site.baseurl}}/css/main.css" />        
     </head>
 
     <body>
         <header>         
-            <nav class="navbar">       
-                <div class="container">
-                    <div class="row">
-                        <div class="logo-column">
-                            <h3><a class="visible-mobile toggle-menu menu-left push-body"><i class="fa fa-bars"></i></a> <a href="{{site.url}}/">{{ site.name }}</a></h3>
-                        </div>
-                        <div class="menu-column visible-desktop">
-                            <ul class="navbar-list">
-                                {% for link in site.data.menu.links %}
-                                    <li class="navbar-item"><a class="navbar-link" href="{{site.baseurl}}{{link.url}}"><i class="fa {{link.icon}}"></i> {{link.title}}</a></li>
-                                {% endfor %}
-                                <li class="navbar-item visible-mobile"><a href="https://github.com/ptsavdar/ptsavdar.github.io"><i class="fa fa-github"></i> Fork me on Github</a></li>
-                            </ul>
-                        </div>                        
+            <nav class="navbar">     
+                <div class="row header-container">
+                    <div class="logo-column">
+                        <h4><a class="visible-mobile toggle-menu menu-left push-body"><i class="fa fa-bars"></i></a> <a href="{{site.url}}/">{{ site.name }}</a></h4>
                     </div>
-                </div>           
+                    <div class="menu-column visible-desktop">
+                        <ul class="navbar-list">
+                            {% for link in site.data.menu.links %}
+                                <li class="navbar-item"><a class="navbar-link" href="{{site.baseurl}}{{link.url}}"><i class="fa {{link.icon}}"></i> {{link.title}}</a></li>
+                            {% endfor %}                            
+                        </ul>
+                    </div>                        
+                </div>
             </nav>
             <nav class="navbar-mobile cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left visible-mobile">
-                <h3>Menu</h3>
+                <h5>Menu</h5>
                 {% for link in site.data.menu.links %}
                     <a class="navbar-link" href="{{site.baseurl}}{{link.url}}"><i class="fa {{link.icon}}"></i> {{link.title}}</a>
                 {% endfor %}
+                <a href="https://github.com/ptsavdar/ptsavdar.github.io"><i class="fa fa-github"></i> Fork me on Github</a>
             </nav>
-            <h4 class="u-cf">{{ site.description }}</h4>
+            <h6 class="u-cf header-container">{{ site.description }}</h6>
         </header>
         <main class="container">
 
@@ -83,8 +78,16 @@
 
         <footer>
             <hr />
-            <p>&copy; <time>2015</time> {{ site.author }}</p>
-
+            <div class="container">
+                <div class="row">
+                    <div class="">
+                        {% include social-icons.html %}
+                    </div>                    
+                </div>
+                <div>&copy; <time>2015</time> {{ site.author }}</div>
+            </div>
+            <p></p>
+            <p></p>
             <a class="fork-on-github visible-desktop" href="https://github.com/ptsavdar/ptsavdar.github.io"><img style="position: absolute; top: 0; left: 0; border: 0; width:12%; max-width:149px;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>
 
         </footer>
@@ -92,6 +95,8 @@
         <script src="{{site.baseurl}}/js/jquery-2.1.3.min.js"></script>
         <script src="{{site.baseurl}}/js/jPushMenu.js"></script>
         <script src="{{site.baseurl}}/js/script.js"></script>
+
+        {% include analytics.html %}
     </body>
 
 </html>
