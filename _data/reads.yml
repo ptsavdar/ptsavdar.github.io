@@ -1,0 +1,33 @@
+-
+    year: 2015
+    reads:
+        -   title: The pragmatic Programmer
+            authors: 'Andrew Hunt, David Thomas'
+            url: http://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer
+-
+    year: 2014
+    reads: 
+        -   title: Don't make me think
+            authors: Steve Krug
+            url: http://www.goodreads.com/book/show/18197267-don-t-make-me-think-revisited
+        -   title: Sharp Objects
+            authors: Gillian Flynn
+            url: http://www.goodreads.com/book/show/66559.Sharp_Objects
+        -   title: Dark Places
+            authors: Gillian Flynn
+            url: http://www.goodreads.com/book/show/5886881-dark-places
+        -   title: A Game of Thrones
+            authors: George R.R. Martin
+            url: http://www.goodreads.com/book/show/13496.A_Game_of_Thrones
+-   
+    year: 2013
+    reads:
+        -   title: The Definitive Book of Body Language
+            authors: 'Allan Pease, Barbara Pease'
+            url: http://www.goodreads.com/book/show/262731.The_Definitive_Book_of_Body_Language
+        -   title: The Whisperers
+            authors: John Connolly
+            url: http://www.goodreads.com/book/show/7193546-the-whisperers
+        -   title: The Great Gatsby
+            authors: F. Scott Fitzgerald
+            url: http://www.goodreads.com/book/show/4671.The_Great_Gatsby

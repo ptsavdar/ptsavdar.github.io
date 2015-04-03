@@ -1,0 +1,22 @@
+---
+layout: default
+title: Reads
+---
+
+<h1>Some of my reads...</h1>
+
+<ul class="books">
+{% for data in site.data.reads %}
+    <h2 class="title">{{ data.year }}</h2>
+
+    <ul class="reads-by-year {{ data.year }}">
+    {% for read in data.reads %}
+        <li>
+            <a href="{{ read.url }}">
+                <span class="book-title">{{ read.title }}</span> - <em class="book-authors">{{ read.authors }}</em>
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endfor %}
+</ul>
