@@ -1,15 +1,18 @@
 links:
-    -   title: Home
-        icon: fa-home
-        url: /
-    -   title: Contact
-        icon: fa-envelope
-        url: /contact
+    -   title: About me
+        icon: fa-user
+        url: /about
     -   title: Reads
         icon: fa-book
-        url: /reads
+        url: /reads    
+    -   title: Contact
+        icon: fa-envelope
+        url: /contact    
     -   title: RSS Feed
         icon: fa-rss
         url: /atom.xml
+    -   title: Fork me
+        icon: fa-github
+        url: https://github.com/ptsavdar/ptsavdar.github.io
 
 
