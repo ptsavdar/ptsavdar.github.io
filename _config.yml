@@ -1,24 +1,28 @@
-name: Panagiotis TSAVDARIS
-description: This is Panos' blog
-#name: Test Test
-#description: This is a test
-author: Panagiotis TSAVDARIS
-author_email: ptsavdar@gmail.com
-url: http://ptsavdar.github.io
+# Permalinks
+permalink:           pretty
 
+# Setup
+title:               Panagiotis Tsavdaris
+tagline:             Here lie my journal, thoughts, experience...
+url:                 http://ptsavdar.github.io
+paginate:            5
+baseurl:             ""
 category_dir: /
 
-permalink: pretty
-
-markdown: redcarpet
-
-paginate: 5
-
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
 sass:
-    sass_dir: _scss
-    style: :compressed
+  sass_dir:          _sass
+  style:            :compressed
 
 exclude: [ README.md, Gemfile, Gemfile.lock ]
+
+# About/contact
+author:
+  name:              Panagiotis Tsavdaris
+  url:               http://ptsavdar.github.io
+  email:             ptsavdar@gmail.com
 
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -28,3 +32,13 @@ footer-links:
     linkedin: ptsavdar
     twitter: ptsavdar
     stackoverflow: users/3016484/ptsavdar
+
+# Custom vars
+version:             1.0.0
+github:
+  repo:              https://github.com/ptsavdar/ptsavdar.github.io
+
+# plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-gist

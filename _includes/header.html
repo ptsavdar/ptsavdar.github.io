@@ -1,0 +1,27 @@
+<header>         
+    <nav class="navbar">     
+        <div class="row header-container">
+            <div class="logo-column">
+                <h4 class="logo-header">
+                    <a class="visible-mobile toggle-menu menu-left push-body"><i class="fa fa-bars"></i></a> 
+                    <a href="/">
+                        <span class="sitelogo"><img src="/images/logo.png" class="logo"></span><span class="sitename">{{ site.title }}</span>
+                    </a>
+                </h4>
+            </div>
+            <div class="menu-column visible-desktop">
+                <ul class="navbar-list">
+                    {% for link in site.data.menu.links %}
+                        <li class="navbar-item"><a class="navbar-link" href="{{site.baseurl}}{{link.url}}"><i class="fa {{link.icon}}"></i> {{link.title}}</a></li>
+                    {% endfor %}                            
+                </ul>
+            </div>                        
+        </div>
+    </nav>
+    <nav class="navbar-mobile cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left visible-mobile">
+        <h5>Menu</h5>
+        {% for link in site.data.menu.links %}
+            <a class="navbar-link" href="{{site.baseurl}}{{link.url}}"><i class="fa {{link.icon}}"></i> {{link.title}}</a>
+        {% endfor %}
+    </nav>            
+</header>
