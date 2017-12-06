@@ -2,19 +2,19 @@
 layout: default
 ---
 
-<article>
-        <header>
-            <h2>{{ page.title }}</h2>
-            <span><i class="icon-clock"></i><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></span><br/>
-            <span class="category"><i class="icon-tag"></i> {{ page.categories | category_links }}</span><br/>
-            <span class="author"><i class="icon-user"></i> {% if page.author %}{{page.author}}{% else %}{{site.author}}{% endif%}</span>
-        </header>
+<article class="post">
+    <header>
+        <h2 class="post-title">{{ page.title }}</h2>
+        <span class="post-date"><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></span><br/>
+        <span class="post-category">{{ page.categories | category_links }}</span><br/>
+        <span class="post-author">{% if page.author %}{{page.author}}{% else %}{{site.author}}{% endif%}</span>
+    </header>
 
-        <div class="entry">{{ content }}</div>
+    <div class="entry">{{ content }}</div>
 
-        <footer>
-             {% include disqus.html disqus_identifier=page.disqus_identifier %}
-        </footer>
+    <footer>
+            {% include disqus.html disqus_identifier=page.disqus_identifier %}
+    </footer>
 
 </article>
 

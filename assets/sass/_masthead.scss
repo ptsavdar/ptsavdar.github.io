@@ -6,6 +6,7 @@
   padding-top:    1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
+  border-bottom: 1px solid #eee;
 }
 
 .masthead-title {
@@ -20,6 +21,14 @@
   small {
     font-size: 75%;
     font-weight: 400;
-    opacity: .5;
+    color: #c0c0c0;
+    letter-spacing: 0;
+  }
+
+  @media (max-width: 48em) {
+    text-align: center;
+    small {
+      display: none;
+    }
   }
 }

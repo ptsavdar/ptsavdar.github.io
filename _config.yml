@@ -4,25 +4,35 @@ permalink:           pretty
 # Setup
 title:               Panagiotis Tsavdaris
 tagline:             Here lie my journal, thoughts, experience...
+description:         'Cheers Im Panos!'
 url:                 http://ptsavdar.github.io
 paginate:            5
+paginate_path:       "_pages/page:num"
 baseurl:             ""
+assetspath:          "assets"
 category_dir: /
-
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
-
-exclude: [ README.md, Gemfile, Gemfile.lock ]
 
 # About/contact
 author:
   name:              Panagiotis Tsavdaris
   url:               http://ptsavdar.github.io
   email:             ptsavdar@gmail.com
+
+# Default markdown parser
+markdown: kramdown
+
+# Make sure that pages don't end up behind weird urls like:`_pages/myPage.html`
+collections:
+  pages:
+    output: true
+    permalink: /:path
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          assets/sass
+  style:            :compressed
 
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -33,8 +43,12 @@ footer-links:
     twitter: ptsavdar
     stackoverflow: users/3016484/ptsavdar
 
+# Make sure the `_pages/` is processed
+include:
+  - _pages
+  - _assets
+
 # Custom vars
-version:             1.0.0
 github:
   repo:              https://github.com/ptsavdar/ptsavdar.github.io
 
@@ -42,3 +56,7 @@ github:
 plugins:
   - jekyll-paginate
   - jekyll-gist
+  - jekyll-seo-tag
+
+# Exclude from processing (not moved to `_site/`)
+exclude: [ README.md, Gemfile, Gemfile.lock, node_modules, package.json, CNAME ]
